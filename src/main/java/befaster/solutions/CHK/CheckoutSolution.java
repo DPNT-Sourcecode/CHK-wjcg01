@@ -17,7 +17,7 @@ public class CheckoutSolution {
         int sum = 0;
         int contorA = 0, contorB = 0;
         int contorE = 0;
-        int contorF = 0;
+        int contorF = -1;
 
 
 
@@ -29,7 +29,7 @@ public class CheckoutSolution {
             if(skus.charAt(i) =='F') {
                 contorF++;
                 if(contorF == 2) {
-                    contorF = 0;
+                    contorF = -1;
                    continue;
                 }
             }
@@ -53,11 +53,12 @@ public class CheckoutSolution {
             sum -= contorE/2 * 30;
             contorB -= contorE/2;
         sum -= contorB/2 * 15;
- 
+
 
 
 
         return sum;
     }
 }
+
 
