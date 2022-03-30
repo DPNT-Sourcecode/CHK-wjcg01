@@ -57,7 +57,11 @@ public class CheckoutSolution {
         int contorU = -1;
         int contorV = 0;
         int contorM = 0;
-        int sumOfTree = 0;
+        int contorS = 0;
+        int contorT = 0;
+        int contorX = 0;
+        int contorY = 0;
+        int contorZ = 0;
 
 
         for (int i = 0; i < skus.length();i++) {
@@ -111,6 +115,21 @@ public class CheckoutSolution {
             if(skus.charAt(i) =='R') {
                 contorR++;
             }
+            if(skus.charAt(i) =='S') {
+                contorS++;
+            }
+            if(skus.charAt(i) =='T') {
+                contorT++;
+            }
+            if(skus.charAt(i) =='X') {
+                contorX++;
+            }
+            if(skus.charAt(i) =='Y') {
+                contorY++;
+            }
+            if(skus.charAt(i) =='Z') {
+                contorZ++;
+            }
 
 
             if(skus.charAt(i) =='V') {
@@ -137,7 +156,8 @@ public class CheckoutSolution {
         sum -=  simpleDeal(contorQ,10,3,-1,0);
         sum -= simpleDeal(contorV,20,3,2,10);
 
-
+        if(contorS > 0 && contorT > 0 && contorX > 0)
+            sum -= 12;
 
 
 
@@ -152,4 +172,3 @@ public class CheckoutSolution {
         return sum;
     }
 }
-
