@@ -38,7 +38,7 @@ public class CheckoutSolution {
 
         sum -= contorA/5 * 50;
         sum -= contorA%5/3 > 0 ? 20 : 0;
-        if(contorB >= 0)
+        if(contorB > 0)
             sum -= contorE/2 * 30;
             contorB -= contorE/2;
         sum -= contorB/2 * 15;
@@ -49,6 +49,7 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
 
 
 
