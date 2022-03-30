@@ -7,32 +7,34 @@ import java.util.HashMap;
 
 public class CheckoutSolution {
     public Integer checkout(String skus) {
-        
+        HashMap <Character, Integer> pricesbyProduct = new HashMap<Character,Integer>();
+        pricesbyProduct.put('A',50);
+        pricesbyProduct.put('B',30);
+        pricesbyProduct.put('C',20);
+        pricesbyProduct.put('D',15);
         int sum = 0;
-        int contorA = 0;
-        int contorB = 0;
+        int contorA = 0, contorB = 0;
+
+
         for (int i = 0; i < skus.length();i++) {
+            sum += pricesbyProduct.get(skus.charAt(i));
             if(skus.charAt(i)=='A') {
-                sum += 50;
                 contorA++;
             }
             if(skus.charAt(i)=='B') {
-                sum += 30;
                 contorB++;
             }
-            if(skus.charAt(i)=='C') {
-                sum += 20;
-            }
-            if(skus.charAt(i)=='D') {
-                sum += 15;
-            }
+
         }
+        sum -= contorA/3 * 20;
+        sum -= contorB/2 * 15;
 
 
 
-        ;
+        return sum;
     }
 }
+
 
 
 
