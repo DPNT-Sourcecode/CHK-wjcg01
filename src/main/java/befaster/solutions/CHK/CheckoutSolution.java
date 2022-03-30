@@ -13,15 +13,25 @@ public class CheckoutSolution {
         pricesbyProduct.put('C',20);
         pricesbyProduct.put('D',15);
         pricesbyProduct.put('E',40);
+        pricesbyProduct.put('F',10);
         int sum = 0;
         int contorA = 0, contorB = 0;
         int contorE = 0;
+        int contorF = 0;
+
 
 
         for (int i = 0; i < skus.length();i++) {
             if(skus.charAt(i) != 'A' && skus.charAt(i) != 'B' && skus.charAt(i) != 'C' && skus.charAt(i) != 'D'
-            && skus.charAt(i) != 'E') {
+            && skus.charAt(i) != 'E' && skus.charAt(i) != 'F') {
                 return -1;
+            }
+            if(skus.charAt(i) =='F') {
+                contorF++;
+                if(contorF == 2) {
+                    contorF = 0;
+                   continue;
+                }
             }
             sum += pricesbyProduct.get(skus.charAt(i));
             if(skus.charAt(i) =='A') {
@@ -34,6 +44,7 @@ public class CheckoutSolution {
                 contorE++;
             }
 
+
         }
 
         sum -= contorA/5 * 50;
@@ -42,10 +53,11 @@ public class CheckoutSolution {
             sum -= contorE/2 * 30;
             contorB -= contorE/2;
         sum -= contorB/2 * 15;
-
+ 
 
 
 
         return sum;
     }
 }
+
