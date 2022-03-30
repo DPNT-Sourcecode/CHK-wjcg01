@@ -48,7 +48,15 @@ public class CheckoutSolution {
         int contorA = 0, contorB = 0;
         int contorE = 0;
         int contorF = -1;
-
+        int contorH = 0;
+        int contorK = 0;
+        int contorN = 0;
+        int contorP = 0;
+        int contorQ = 0;
+        int contorR = 0;
+        int contorU = -1;
+        int contorV = 0;
+        int contorM = 0;
 
 
         for (int i = 0; i < skus.length();i++) {
@@ -62,6 +70,13 @@ public class CheckoutSolution {
                    continue;
                 }
             }
+            if(skus.charAt(i) =='U') {
+                contorU++;
+                if(contorU == 3) {
+                    contorU = -1;
+                    continue;
+                }
+            }
             sum += pricesbyProduct.get(skus.charAt(i));
             if(skus.charAt(i) =='A') {
                 contorA++;
@@ -71,6 +86,34 @@ public class CheckoutSolution {
             }
             if(skus.charAt(i) =='E') {
                 contorE++;
+            }
+            if(skus.charAt(i) =='H') {
+                contorH++;
+            }
+            if(skus.charAt(i) =='K') {
+                contorK++;
+            }
+            if(skus.charAt(i) =='N') {
+                contorN++;
+            }
+            if(skus.charAt(i) =='M') {
+                contorM++;
+            }
+            if(skus.charAt(i) =='P') {
+                contorP++;
+            }
+            if(skus.charAt(i) =='Q') {
+                contorQ++;
+            }
+            if(skus.charAt(i) =='R') {
+                contorR++;
+            }
+
+            if(skus.charAt(i) =='U') {
+                contorU++;
+            }
+            if(skus.charAt(i) =='V') {
+                contorV++;
             }
 
 
@@ -82,11 +125,28 @@ public class CheckoutSolution {
         if(contorB > 0)
             sum -= contorE/2 * 30;
             contorB -= contorE/2;
-        simpleDeal(contorB,15,2,-1,0);
+        if (contorQ > 0)
+            sum-= contorR/3 * 30;
+            contorQ -= contorR/2;
 
+        simpleDeal(contorB,15,2,-1,0);
+        simpleDeal(contorH,20,10,5,5);
+        simpleDeal(contorK,10,2,-1,0);
+        simpleDeal(contorP,50,5,-1,0);
+        simpleDeal(contorQ,10,3,-1,0);
+        simpleDeal(contorV,20,3,2,10);
+
+
+
+        while((contorM >= 0) && contorN/3 > 0 ) {
+                sum -= 15;
+                contorM--;
+                contorN -= 3;
+        }
 
 
 
         return sum;
     }
 }
+
