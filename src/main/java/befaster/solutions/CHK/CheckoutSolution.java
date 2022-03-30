@@ -7,11 +7,17 @@ import java.util.HashMap;
 
 public class CheckoutSolution {
     public Integer checkout(String skus) {
-        ArrayList <Integer> contor = new ArrayList<>();
-        
+        int sum = 0;
+        for (int i = 0; i < skus.length();i++) {
+            if(skus.charAt(i)="A") {
+
+            }
+        }
+
 
 
         ;
     }
 }
+
 
