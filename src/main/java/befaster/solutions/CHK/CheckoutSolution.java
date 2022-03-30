@@ -76,12 +76,13 @@ public class CheckoutSolution {
 
         }
 
-        sum -= contorA/5 * 50;
-        sum -= contorA%5/3 > 0 ? 20 : 0;
+
+        simpleDeal(contorA,50,5,3,20);
+
         if(contorB > 0)
             sum -= contorE/2 * 30;
             contorB -= contorE/2;
-        sum -= contorB/2 * 15;
+        simpleDeal(contorB,15,2,-1,0);
 
 
 
@@ -89,4 +90,5 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
 
