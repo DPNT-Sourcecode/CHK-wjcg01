@@ -6,7 +6,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CheckoutSolution {
+    int simpleDeal (int contor, int discount, int nrDiscount, int special, int discountSpecial) {
+        int finalDiscount = 0;
+        finalDiscount = contor/nrDiscount * discount;
+        if (special != -1) {
+            finalDiscount += contor%nrDiscount/special > 0 ? discountSpecial : 0;
+        }
+      return finalDiscount;
+    }
     public Integer checkout(String skus) {
+
         HashMap <Character, Integer> pricesbyProduct = new HashMap<Character,Integer>();
         pricesbyProduct.put('A',50);
         pricesbyProduct.put('B',30);
@@ -43,7 +52,7 @@ public class CheckoutSolution {
 
 
         for (int i = 0; i < skus.length();i++) {
-            if(!Character.isUpperCase(skus.charAt(i)) {
+            if(!Character.isUpperCase(skus.charAt(i))) {
                 return -1;
             }
             if(skus.charAt(i) =='F') {
@@ -80,3 +89,4 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
