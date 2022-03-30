@@ -70,6 +70,7 @@ public class CheckoutSolution {
                    continue;
                 }
             }
+
             if(skus.charAt(i) =='U') {
                 contorU++;
                 if(contorU == 3) {
@@ -77,6 +78,7 @@ public class CheckoutSolution {
                     continue;
                 }
             }
+
             sum += pricesbyProduct.get(skus.charAt(i));
             if(skus.charAt(i) =='A') {
                 contorA++;
@@ -109,9 +111,7 @@ public class CheckoutSolution {
                 contorR++;
             }
 
-            if(skus.charAt(i) =='U') {
-                contorU++;
-            }
+            
             if(skus.charAt(i) =='V') {
                 contorV++;
             }
@@ -149,3 +149,4 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
