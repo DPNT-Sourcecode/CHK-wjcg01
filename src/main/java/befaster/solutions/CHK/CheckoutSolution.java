@@ -17,6 +17,9 @@ public class CheckoutSolution {
 
 
         for (int i = 0; i < skus.length();i++) {
+            if(skus.charAt(i) != 'A' || skus.charAt(i) != 'B' || skus.charAt(i) != 'C' || skus.charAt(i) != 'D') {
+                return -1;
+            }
             sum += pricesbyProduct.get(skus.charAt(i));
             if(skus.charAt(i)=='A') {
                 contorA++;
@@ -34,6 +37,7 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
 
 
 
