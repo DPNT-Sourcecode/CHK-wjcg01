@@ -84,10 +84,7 @@ public class CheckoutSolution {
                     continue;
                 }
             }
-           if(contorS == 3 || contorT == 3 || contorY == 3)
-                sum -= 15;
-            if(contorZ == 3)
-                sum -= 18;
+
 
 
             sum += pricesbyProduct.get(skus.charAt(i));
@@ -177,7 +174,11 @@ public class CheckoutSolution {
         }
 
 
-
+        if(contorS == 3 || contorT == 3 || contorY == 3)
+            sum -= 15;
+        if(contorZ == 3)
+            sum -= 18;
         return sum;
     }
 }
+
