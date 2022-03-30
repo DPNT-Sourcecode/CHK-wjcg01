@@ -84,12 +84,10 @@ public class CheckoutSolution {
                     continue;
                 }
             }
-            sum -= contorS * 20;
-            sum -= contorT * 20;
-            sum -= contorX * 17;
-            sum -= contorY * 20;
-            sum -= contorZ * 21;
-            //sum -= sumOfTree/3 * 15 ;
+           if(contorS == 3 || contorT == 3 || contorY == 3)
+                sum -= 15;
+            if(contorZ == 3)
+                sum -= 18;
 
 
             sum += pricesbyProduct.get(skus.charAt(i));
@@ -183,7 +181,3 @@ public class CheckoutSolution {
         return sum;
     }
 }
-
-
-
-
