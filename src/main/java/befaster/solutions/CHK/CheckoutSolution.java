@@ -35,14 +35,14 @@ public class CheckoutSolution {
         pricesbyProduct.put('P',50);
         pricesbyProduct.put('Q',30);
         pricesbyProduct.put('R',50);
-        pricesbyProduct.put('S',20);
-        pricesbyProduct.put('T',20);
+        pricesbyProduct.put('S',0);
+        pricesbyProduct.put('T',0);
         pricesbyProduct.put('U',40);
         pricesbyProduct.put('V',50);
         pricesbyProduct.put('W',20);
-        pricesbyProduct.put('X',17);
-        pricesbyProduct.put('Y',20);
-        pricesbyProduct.put('Z',21);
+        pricesbyProduct.put('X',0);
+        pricesbyProduct.put('Y',0);
+        pricesbyProduct.put('Z',0);
 
         int sum = 0;
         int contorA = 0, contorB = 0;
@@ -178,4 +178,5 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
 
