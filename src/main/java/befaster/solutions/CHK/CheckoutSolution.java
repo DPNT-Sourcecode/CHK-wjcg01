@@ -138,7 +138,7 @@ public class CheckoutSolution {
         sum -= simpleDeal(contorV,20,3,2,10);
 
 
-        
+
 
 
         while((contorM > 0) && contorN/3 > 0 ) {
@@ -152,3 +152,4 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
