@@ -176,9 +176,15 @@ public class CheckoutSolution {
 
         if(contorS == 3 || contorT == 3 || contorY == 3)
             sum -= 15;
+            if(contorZ > 0)
+                sum -=1;
         if(contorZ == 3)
             sum -= 18;
+        if(contorS == contorT && contorT == contorX) {
+            sum -= contorS * 12;
+        }
         return sum;
     }
 }
+
 
