@@ -35,14 +35,14 @@ public class CheckoutSolution {
         pricesbyProduct.put('P',50);
         pricesbyProduct.put('Q',30);
         pricesbyProduct.put('R',50);
-        pricesbyProduct.put('S',0);
-        pricesbyProduct.put('T',0);
+        pricesbyProduct.put('S',20);
+        pricesbyProduct.put('T',20);
         pricesbyProduct.put('U',40);
         pricesbyProduct.put('V',50);
         pricesbyProduct.put('W',20);
-        pricesbyProduct.put('X',0);
-        pricesbyProduct.put('Y',0);
-        pricesbyProduct.put('Z',0);
+        pricesbyProduct.put('X',17);
+        pricesbyProduct.put('Y',20);
+        pricesbyProduct.put('Z',21);
 
         int sum = 0;
         int contorA = 0, contorB = 0;
@@ -85,7 +85,7 @@ public class CheckoutSolution {
                 }
             }
 
-            sum += sumOfTree/3 * 45;
+            sum -= sumOfTree/3 * 15 ;
 
             sum += pricesbyProduct.get(skus.charAt(i));
             if(skus.charAt(i) =='A') {
@@ -178,5 +178,6 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
 
 
