@@ -27,7 +27,7 @@ public class CheckoutSolution {
         pricesbyProduct.put('H',10);
         pricesbyProduct.put('I',35);
         pricesbyProduct.put('J',60);
-        pricesbyProduct.put('K',80);
+        pricesbyProduct.put('K',70);
         pricesbyProduct.put('L',90);
         pricesbyProduct.put('M',15);
         pricesbyProduct.put('N',40);
@@ -35,14 +35,14 @@ public class CheckoutSolution {
         pricesbyProduct.put('P',50);
         pricesbyProduct.put('Q',30);
         pricesbyProduct.put('R',50);
-        pricesbyProduct.put('S',30);
+        pricesbyProduct.put('S',20);
         pricesbyProduct.put('T',20);
         pricesbyProduct.put('U',40);
         pricesbyProduct.put('V',50);
         pricesbyProduct.put('W',20);
-        pricesbyProduct.put('X',90);
-        pricesbyProduct.put('Y',10);
-        pricesbyProduct.put('Z',50);
+        pricesbyProduct.put('X',17);
+        pricesbyProduct.put('Y',20);
+        pricesbyProduct.put('Z',21);
 
         int sum = 0;
         int contorA = 0, contorB = 0;
@@ -57,6 +57,7 @@ public class CheckoutSolution {
         int contorU = -1;
         int contorV = 0;
         int contorM = 0;
+        int sumOfTree = 0;
 
 
         for (int i = 0; i < skus.length();i++) {
@@ -131,11 +132,13 @@ public class CheckoutSolution {
 
         sum -= simpleDeal(contorB,15,2,-1,0);
         sum -= simpleDeal(contorH,20,10,5,5);
-        sum -= simpleDeal(contorK,10,2,-1,0);
+        sum -= simpleDeal(contorK,20,2,-1,0);
         sum -= simpleDeal(contorP,50,5,-1,0);
         sum -=  simpleDeal(contorQ,10,3,-1,0);
         sum -= simpleDeal(contorV,20,3,2,10);
 
+
+        
 
 
         while((contorM > 0) && contorN/3 > 0 ) {
@@ -149,6 +152,7 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
 
 
 
