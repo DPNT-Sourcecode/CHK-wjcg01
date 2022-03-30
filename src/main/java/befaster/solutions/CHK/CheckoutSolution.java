@@ -84,8 +84,13 @@ public class CheckoutSolution {
                     continue;
                 }
             }
+            sum -= contorS * 20;
+            sum -= contorT * 20;
+            sum -= contorX * 17;
+            sum -= contorY * 20;
+            sum -= contorZ * 21;
+            //sum -= sumOfTree/3 * 15 ;
 
-            sum -= sumOfTree/3 * 15 ;
 
             sum += pricesbyProduct.get(skus.charAt(i));
             if(skus.charAt(i) =='A') {
@@ -178,6 +183,7 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
 
 
 
