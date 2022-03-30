@@ -120,7 +120,7 @@ public class CheckoutSolution {
         }
 
 
-        simpleDeal(contorA,50,5,3,20);
+        sum -=  simpleDeal(contorA,50,5,3,20);
 
         if(contorB > 0)
             sum -= contorE/2 * 30;
@@ -129,12 +129,12 @@ public class CheckoutSolution {
             sum-= contorR/3 * 30;
             contorQ -= contorR/2;
 
-        simpleDeal(contorB,15,2,-1,0);
-        simpleDeal(contorH,20,10,5,5);
-        simpleDeal(contorK,10,2,-1,0);
-        simpleDeal(contorP,50,5,-1,0);
-        simpleDeal(contorQ,10,3,-1,0);
-        simpleDeal(contorV,20,3,2,10);
+        sum -= simpleDeal(contorB,15,2,-1,0);
+        sum -= simpleDeal(contorH,20,10,5,5);
+        sum -= simpleDeal(contorK,10,2,-1,0);
+        sum -= simpleDeal(contorP,50,5,-1,0);
+        sum -=  simpleDeal(contorQ,10,3,-1,0);
+        sum -= simpleDeal(contorV,20,3,2,10);
 
 
 
@@ -149,4 +149,5 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
 
