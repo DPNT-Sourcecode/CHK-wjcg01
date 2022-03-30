@@ -138,7 +138,7 @@ public class CheckoutSolution {
 
 
 
-        while((contorM >= 0) && contorN/3 >= 0 ) {
+        while((contorM > 0) && contorN/3 > 0 ) {
                 sum -= 15;
                 contorM--;
                 contorN -= 3;
@@ -149,5 +149,6 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
 
 
