@@ -14,6 +14,27 @@ public class CheckoutSolution {
         pricesbyProduct.put('D',15);
         pricesbyProduct.put('E',40);
         pricesbyProduct.put('F',10);
+        pricesbyProduct.put('G',20);
+        pricesbyProduct.put('H',10);
+        pricesbyProduct.put('I',35);
+        pricesbyProduct.put('J',60);
+        pricesbyProduct.put('K',80);
+        pricesbyProduct.put('L',90);
+        pricesbyProduct.put('M',15);
+        pricesbyProduct.put('N',40);
+        pricesbyProduct.put('O',10);
+        pricesbyProduct.put('P',50);
+        pricesbyProduct.put('Q',30);
+        pricesbyProduct.put('R',50);
+        pricesbyProduct.put('S',30);
+        pricesbyProduct.put('T',20);
+        pricesbyProduct.put('U',40);
+        pricesbyProduct.put('V',50);
+        pricesbyProduct.put('W',20);
+        pricesbyProduct.put('X',90);
+        pricesbyProduct.put('Y',10);
+        pricesbyProduct.put('Z',50);
+
         int sum = 0;
         int contorA = 0, contorB = 0;
         int contorE = 0;
@@ -22,8 +43,7 @@ public class CheckoutSolution {
 
 
         for (int i = 0; i < skus.length();i++) {
-            if(skus.charAt(i) != 'A' && skus.charAt(i) != 'B' && skus.charAt(i) != 'C' && skus.charAt(i) != 'D'
-            && skus.charAt(i) != 'E' && skus.charAt(i) != 'F') {
+            if(!Character.isUpperCase(skus.charAt(i)) {
                 return -1;
             }
             if(skus.charAt(i) =='F') {
@@ -60,5 +80,6 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
 
 
