@@ -19,7 +19,8 @@ public class CheckoutSolution {
 
 
         for (int i = 0; i < skus.length();i++) {
-            if(skus.charAt(i) != 'A' && skus.charAt(i) != 'B' && skus.charAt(i) != 'C' && skus.charAt(i) != 'D') {
+            if(skus.charAt(i) != 'A' && skus.charAt(i) != 'B' && skus.charAt(i) != 'C' && skus.charAt(i) != 'D'
+            && skus.charAt(i) != 'E') {
                 return -1;
             }
             sum += pricesbyProduct.get(skus.charAt(i));
@@ -47,4 +48,5 @@ public class CheckoutSolution {
         return sum;
     }
 }
+
 
